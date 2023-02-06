@@ -13,17 +13,17 @@ module WorldTimeApi
     response = get("/")
     return "Consult Error" if response.code != 200
 
-    response
-  rescue Net::OpenTimeout
-    "Error time out connection"
+    response.parsed_response
+  rescue StandardError
+    "Error of connection"
   end
 
   def self.time(zone_name)
     response = get("/#{zone_name}")
     return "Invalid Zone Name" if response.code != 200
 
-    response
-  rescue Net::OpenTimeout
-    "Error time out connection"
+    response.parsed_response
+  rescue StandardError
+    "Error of connection"
   end
 end

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    world_time_api (0.1.1)
+    world_time_api (0.1.2)
       httparty (~> 0.20)
 
 GEM
@@ -9,12 +9,10 @@ GEM
   specs:
     ast (2.4.2)
     diff-lcs (1.4.4)
-    httparty (0.20.0)
-      mime-types (~> 3.0)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
-    mime-types (3.4.1)
-      mime-types-data (~> 3.2015)
-    mime-types-data (3.2021.1115)
+    mini_mime (1.1.2)
     multi_xml (0.6.0)
     parallel (1.21.0)
     parser (3.0.2.0)
@@ -51,6 +49,7 @@ GEM
     unicode-display_width (2.1.0)
 
 PLATFORMS
+  ruby
   x86_64-linux
 
 DEPENDENCIES
