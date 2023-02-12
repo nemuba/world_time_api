@@ -28,6 +28,10 @@ gem install world_time_api
 WorldTimeApi.timezones # list timezones
 
 WorldTimeApi.time(time_zone) # get datetime of the timezone
+
+WorldTimeApi.client_ip # get datetime by your client ip
+
+WorldTimeApi.client_ip(ip_address) # get datatime by ip address
 ```
 
 ## Development
