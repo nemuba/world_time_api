@@ -12,14 +12,14 @@ gem 'world_time_api'
 
 And then execute:
 
-```
-$ bundle install
+```bash
+bundle install
 ```
 
 Or install it yourself as:
 
-```
-$ gem install world_time_api
+```bash
+gem install world_time_api
 ```
 
 ## Usage
@@ -28,8 +28,6 @@ $ gem install world_time_api
 WorldTimeApi.timezones # list timezones
 
 WorldTimeApi.time(time_zone) # get datetime of the timezone
-
-
 ```
 
 ## Development
