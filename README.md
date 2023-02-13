@@ -25,13 +25,13 @@ gem install world_time_api
 ## Usage
 
 ```ruby
-WorldTimeApi.timezones # list timezones
+WorldTimeApi::Timezones.call # list timezones
 
-WorldTimeApi.time(time_zone) # get datetime of the timezone
+WorldTimeApi::Time.call(time_zone) # get datetime of the timezone
 
-WorldTimeApi.client_ip # get datetime by your client ip
+WorldTimeApi::ClientIp.call # get datetime by your client ip
 
-WorldTimeApi.client_ip(ip_address) # get datatime by ip address
+WorldTimeApi::ClientIp.call(ip_address) # get datatime by ip address
 ```
 
 ## Development

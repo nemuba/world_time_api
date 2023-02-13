@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 module WorldTimeApi
-  VERSION = "0.1.4"
+  Error = -> (message) { { error: message } }
 end

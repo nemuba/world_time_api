@@ -2,23 +2,24 @@ require_relative "spec_helper"
 require "world_time_api"
 
 RSpec.describe WorldTimeApi do
-  it "#timezones" do
-    response = subject.timezones
+  it "Timezones" do
+    response = subject::Timezones.call
     expect(response).to be_a(Array)
   end
 
-  it "#time" do
-    response = subject.time('America/Sao_Paulo')
+  it "Time" do
+    response = subject::Time.call('America/Sao_Paulo')
     expect(response).to be_a(Hash)
   end
 
-  it "#time_zone invalid" do
-    response = subject.time('teste')
-    expect(response).to eq("Invalid Zone Name")
+  it "Time with invalid timezone" do
+    response = subject::Time.call('teste')
+    expect(response).to be_a(Hash)
+    expect(response[:error]).to eq('Invalid timezone')
   end
 
-  it "#client_ip" do
-    response = subject.client_ip
+  it "ClientIp" do
+    response = subject::ClientIp.call
     expect(response).to be_a(Hash)
   end
 end
