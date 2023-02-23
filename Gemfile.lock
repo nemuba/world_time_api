@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    world_time_api (0.1.4)
+    world_time_api (0.1.5)
       httparty (~> 0.20)
 
 GEM
@@ -60,4 +60,4 @@ DEPENDENCIES
   world_time_api!
 
 BUNDLED WITH
-   2.2.30
+   2.4.7
