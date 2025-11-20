@@ -4,10 +4,9 @@ require_relative "response"
 require_relative "error"
 require 'httparty'
 
-# The WorldTimeApi module contains methods for making requests to the World Time API.
+# A Ruby wrapper for the World Time API.
 module WorldTimeApi
-
-  # The Request module contains methods for making HTTP requests to the World Time API.
+  # A module for making HTTP requests to the World Time API.
   module Request
     include HTTParty
 
@@ -17,6 +16,8 @@ module WorldTimeApi
     #
     # @param url [String] The URL to make the request to.
     # @return [Hash] A hash representing the response body, or an error hash if there was a problem with the request.
+    # @example
+    #   WorldTimeApi::Request::Call.call('/timezone/Europe/London')
     Call = ->(url) {
       begin
         response = get(url)
