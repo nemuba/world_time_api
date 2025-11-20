@@ -3,5 +3,5 @@
 # A Ruby wrapper for the World Time API.
 module WorldTimeApi
   # The current version number of the WorldTimeApi gem.
-  VERSION = "0.1.5"
+  VERSION = "0.1.6"
 end

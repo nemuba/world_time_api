@@ -29,5 +29,5 @@ module WorldTimeApi
   # @return [Hash] A hash representing the response body, or an error hash if there was a problem with the request.
   # @example
   #   WorldTimeApi::ClientIp.call('127.0.0.1')
-  ClientIp = ->(ip = nil) { Request::Call["/ip#{ip ? "/#{ip}" : ''}"] }
+  ClientIp = ->(ip = nil) { Request::Call["/ip#{ip ? "/#{ip}" : ""}"] }
 end

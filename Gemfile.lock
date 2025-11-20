@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    world_time_api (0.1.5)
+    world_time_api (0.1.6)
       httparty (~> 0.20)
 
 GEM
@@ -47,6 +47,7 @@ GEM
       parser (>= 3.0.1.1)
     ruby-progressbar (1.11.0)
     unicode-display_width (2.1.0)
+    yard (0.9.37)
 
 PLATFORMS
   ruby
@@ -58,6 +59,7 @@ DEPENDENCIES
   rspec-expectations
   rubocop (~> 1.21)
   world_time_api!
+  yard
 
 BUNDLED WITH
    2.4.7

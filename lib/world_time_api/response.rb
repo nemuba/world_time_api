@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'json'
+require "json"
 
 # A Ruby wrapper for the World Time API.
 module WorldTimeApi

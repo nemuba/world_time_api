@@ -6,7 +6,7 @@
 <title>
   Module: WorldTimeApi::Request
   
-    &mdash; Documentation by YARD 0.9.28
+    &mdash; Documentation by YARD 0.9.37
   
 </title>
 
@@ -91,7 +91,7 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>The Request module contains methods for making HTTP requests to the World Time API.</p>
+<p>A module for making HTTP requests to the World Time API.</p>
 
 
   </div>
@@ -119,6 +119,14 @@
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../WorldTimeApi.html" title="WorldTimeApi (module)">WorldTimeApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="WorldTimeApi::Request (module)">Request</a></span></span><span class='op'>::</span><span class='const'>Call</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/timezone/Europe/London</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -140,7 +148,7 @@
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span> <span class='tlambeg'>{</span>
+        <dd><pre class="code"><span class='id identifier rubyid_lambda'>lambda</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_url'>url</span><span class='op'>|</span>
   <span class='kw'>begin</span>
     <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
 
@@ -167,9 +175,9 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Feb 23 15:07:23 2023 by
+  Generated on Thu Nov 20 18:24:43 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.28 (ruby-3.2.0).
+  0.9.37 (ruby-3.2.2).
 </div>
 
     </div>

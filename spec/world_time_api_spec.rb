@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative "spec_helper"
 require "world_time_api"
 
@@ -8,14 +10,14 @@ RSpec.describe WorldTimeApi do
   end
 
   it "Time" do
-    response = subject::Time.call('America/Sao_Paulo')
+    response = subject::Time.call("America/Sao_Paulo")
     expect(response).to be_a(Hash)
   end
 
   it "Time with invalid timezone" do
-    response = subject::Time.call('teste')
+    response = subject::Time.call("teste")
     expect(response).to be_a(Hash)
-    expect(response[:error]).to eq('Invalid timezone')
+    expect(response[:error]).to eq("Invalid timezone")
   end
 
   it "ClientIp" do
