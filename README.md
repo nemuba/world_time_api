@@ -2,7 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/world_time_api.svg)](https://badge.fury.io/rb/world_time_api)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/world_time_api`. To experiment with that code, run `bin/console` for an interactive prompt.
+A Ruby wrapper for the World Time API.
 
 ## Installation
 
@@ -26,14 +26,22 @@ gem install world_time_api
 
 ## Usage
 
+### List timezones
+
 ```ruby
-WorldTimeApi::Timezones.call # list timezones
+WorldTimeApi::Timezones.call
+```
 
-WorldTimeApi::Time.call(time_zone) # get datetime of the timezone
+### Get time by timezone
 
-WorldTimeApi::ClientIp.call # get datetime by your client ip
+```ruby
+WorldTimeApi::Time.call('Europe/London')
+```
 
-WorldTimeApi::ClientIp.call(ip_address) # get datatime by ip address
+### Get time by IP address
+
+```ruby
+WorldTimeApi::ClientIp.call('12.215.42.19')
 ```
 
 ## Development
