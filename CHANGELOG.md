@@ -1,4 +1,12 @@
-## [WorldTimeAPi]
+# [WorldTimeAPI]
+
+## [0.1.8] - 2026-01-21
+
+* Add methods for area, location, and region endpoints (AreaTimezones, LocationTimezones, RegionTime)
+* Add .txt endpoints (TimezonesTxt, AreaTimezonesTxt, LocationTimezonesTxt, RegionTimeTxt, ClientIpTxt)
+* Improve and standardize YARD documentation (English)
+* Add usage examples for new endpoints in README.md
+* Add tests for all new methods
 
 ## [0.1.6] - 2025-11-20
 

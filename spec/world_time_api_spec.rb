@@ -24,4 +24,49 @@ RSpec.describe WorldTimeApi do
     response = subject::ClientIp.call
     expect(response).to be_a(Hash)
   end
+
+  it "AreaTimezones" do
+    response = subject::AreaTimezones.call("Europe")
+    expect(response).to be_a(Array)
+  end
+
+  it "LocationTimezones" do
+    response = subject::LocationTimezones.call("America", "Sao_Paulo")
+    expect(response).to be_a(Array).or be_a(Hash)
+  end
+
+  it "RegionTime" do
+    response = subject::RegionTime.call("America", "Argentina", "Salta")
+    expect(response).to be_a(Hash)
+  end
+
+  it "TimezonesTxt" do
+    response = subject::TimezonesTxt.call
+    expect(response).to be_a(Hash)
+    expect(response.values.first).to be_a(String)
+  end
+
+  it "AreaTimezonesTxt" do
+    response = subject::AreaTimezonesTxt.call("Europe")
+    expect(response).to be_a(Hash)
+    expect(response.values.first).to be_a(String)
+  end
+
+  it "LocationTimezonesTxt" do
+    response = subject::LocationTimezonesTxt.call("America", "Sao_Paulo")
+    expect(response).to be_a(Hash)
+    expect(response.values.first).to be_a(String)
+  end
+
+  it "RegionTimeTxt" do
+    response = subject::RegionTimeTxt.call("America", "Argentina", "Salta")
+    expect(response).to be_a(Hash)
+    expect(response.values.first).to be_a(String)
+  end
+
+  it "ClientIpTxt" do
+    response = subject::ClientIpTxt.call
+    expect(response).to be_a(Hash)
+    expect(response.values.first).to be_a(String)
+  end
 end

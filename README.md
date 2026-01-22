@@ -26,22 +26,58 @@ gem install world_time_api
 
 ## Usage
 
-### List timezones
+### List all timezones
 
 ```ruby
 WorldTimeApi::Timezones.call
 ```
 
-### Get time by timezone
+### List timezones by area
 
 ```ruby
-WorldTimeApi::Time.call('Europe/London')
+WorldTimeApi::AreaTimezones.call('Europe')
 ```
 
-### Get time by IP address
+### List timezones by area and location
 
 ```ruby
-WorldTimeApi::ClientIp.call('12.215.42.19')
+WorldTimeApi::LocationTimezones.call('America', 'Sao_Paulo')
+```
+
+### Get time by area, location and region
+
+```ruby
+WorldTimeApi::RegionTime.call('America', 'Argentina', 'Salta')
+```
+
+### List all timezones (plain text)
+
+```ruby
+WorldTimeApi::TimezonesTxt.call
+```
+
+### List timezones by area (plain text)
+
+```ruby
+WorldTimeApi::AreaTimezonesTxt.call('Europe')
+```
+
+### List timezones by area and location (plain text)
+
+```ruby
+WorldTimeApi::LocationTimezonesTxt.call('America', 'Sao_Paulo')
+```
+
+### Get time by area, location and region (plain text)
+
+```ruby
+WorldTimeApi::RegionTimeTxt.call('America', 'Argentina', 'Salta')
+```
+
+### Get time by IP address (plain text)
+
+```ruby
+WorldTimeApi::ClientIpTxt.call('12.215.42.19')
 ```
 
 ## Development
@@ -52,7 +88,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/nemuba/world_time_api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/world_time_api/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at <https://github.com/nemuba/world_time_api>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/world_time_api/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 

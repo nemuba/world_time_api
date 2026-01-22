@@ -1,5 +1,5 @@
-lib/world_time_api.rb 01e41d173d33db5ff4ecc076117a6a0e102fa4bc
+lib/world_time_api.rb 6e9dfcd21ee140c27374afb79e3e38aa362e93ea
 lib/world_time_api/error.rb 170d20be04c96334ea873954f9550df05f18f418
-lib/world_time_api/request.rb ad6fe9e9aa22412e0407d8194ec2a2e968276f32
-lib/world_time_api/version.rb f1db367f1b839616ed9beb6dcc42bc6053811540
+lib/world_time_api/request.rb 9a033ed9385d290a6e4fd91e1077c8f53f819f5c
+lib/world_time_api/version.rb 8abcd3dea4a87ce74be1b3daf4c719e6e257fcda
 lib/world_time_api/response.rb 28fda369b2749dc04153148b4c4f1f17fab15aac

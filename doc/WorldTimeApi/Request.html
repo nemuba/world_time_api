@@ -112,7 +112,7 @@
           <div class="docstring">
   <div class="discussion">
     
-<p>Makes an HTTP GET request to the specified URL and returns the response as a hash.</p>
+<p>Makes an HTTP GET request to the specified URL and returns the response as a hash. Retries up to 3 times in case of connection errors.</p>
 
 
   </div>
@@ -148,7 +148,9 @@
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='id identifier rubyid_lambda'>lambda</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_url'>url</span><span class='op'>|</span>
+        <dd><pre class="code"><span class='id identifier rubyid_lambda'>lambda</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='label'>max_retries:</span> <span class='int'>3</span><span class='op'>|</span>
+  <span class='id identifier rubyid_retries'>retries</span> <span class='op'>=</span> <span class='int'>0</span>
+
   <span class='kw'>begin</span>
     <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
 
@@ -156,6 +158,12 @@
 
     <span class='const'><span class='object_link'><a href="../WorldTimeApi.html" title="WorldTimeApi (module)">WorldTimeApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../WorldTimeApi.html#Response-constant" title="WorldTimeApi::Response (constant)">Response</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_response'>response</span><span class='rbracket'>]</span>
   <span class='kw'>rescue</span> <span class='const'>StandardError</span>
+    <span class='id identifier rubyid_retries'>retries</span> <span class='op'>+=</span> <span class='int'>1</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_retries'>retries</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_max_retries'>max_retries</span>
+      <span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span><span class='float'>0.5</span> <span class='op'>*</span> <span class='id identifier rubyid_retries'>retries</span><span class='rparen'>)</span> <span class='comment'># Exponential backoff: 0.5s, 1s, 1.5s
+</span>      <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Retrying request to </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_url'>url</span><span class='embexpr_end'>}</span><span class='tstring_content'> (attempt </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_retries'>retries</span> <span class='op'>+</span> <span class='int'>1</span><span class='embexpr_end'>}</span><span class='tstring_content'>)...</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>retry</span>
+    <span class='kw'>end</span>
     <span class='const'><span class='object_link'><a href="../WorldTimeApi.html" title="WorldTimeApi (module)">WorldTimeApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../WorldTimeApi.html#Error-constant" title="WorldTimeApi::Error (constant)">Error</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Connection error</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
   <span class='kw'>end</span>
 <span class='rbrace'>}</span></pre></dd>
@@ -175,7 +183,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Nov 20 18:24:43 2025 by
+  Generated on Wed Jan 21 22:02:47 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.2.2).
 </div>

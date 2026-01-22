@@ -83,19 +83,49 @@
 
 <h2 id="label-Usage">Usage</h2>
 
-<h3 id="label-List+timezones">List timezones</h3>
+<h3 id="label-List+all+timezones">List all timezones</h3>
 
 <pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="WorldTimeApi.html" title="WorldTimeApi (module)">WorldTimeApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="WorldTimeApi.html#Timezones-constant" title="WorldTimeApi::Timezones (constant)">Timezones</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
 </code></pre>
 
-<h3 id="label-Get+time+by+timezone">Get time by timezone</h3>
+<h3 id="label-List+timezones+by+area">List timezones by area</h3>
 
-<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="WorldTimeApi.html" title="WorldTimeApi (module)">WorldTimeApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="WorldTimeApi.html#Time-constant" title="WorldTimeApi::Time (constant)">Time</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Europe/London</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="WorldTimeApi.html" title="WorldTimeApi (module)">WorldTimeApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="WorldTimeApi.html#AreaTimezones-constant" title="WorldTimeApi::AreaTimezones (constant)">AreaTimezones</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Europe</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 </code></pre>
 
-<h3 id="label-Get+time+by+IP+address">Get time by IP address</h3>
+<h3 id="label-List+timezones+by+area+and+location">List timezones by area and location</h3>
 
-<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="WorldTimeApi.html" title="WorldTimeApi (module)">WorldTimeApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="WorldTimeApi.html#ClientIp-constant" title="WorldTimeApi::ClientIp (constant)">ClientIp</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>12.215.42.19</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="WorldTimeApi.html" title="WorldTimeApi (module)">WorldTimeApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="WorldTimeApi.html#LocationTimezones-constant" title="WorldTimeApi::LocationTimezones (constant)">LocationTimezones</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>America</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Sao_Paulo</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+<h3 id="label-Get+time+by+area-2C+location+and+region">Get time by area, location and region</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="WorldTimeApi.html" title="WorldTimeApi (module)">WorldTimeApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="WorldTimeApi.html#RegionTime-constant" title="WorldTimeApi::RegionTime (constant)">RegionTime</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>America</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Argentina</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Salta</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+<h3 id="label-List+all+timezones+-28plain+text-29">List all timezones (plain text)</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="WorldTimeApi.html" title="WorldTimeApi (module)">WorldTimeApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="WorldTimeApi.html#TimezonesTxt-constant" title="WorldTimeApi::TimezonesTxt (constant)">TimezonesTxt</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+</code></pre>
+
+<h3 id="label-List+timezones+by+area+-28plain+text-29">List timezones by area (plain text)</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="WorldTimeApi.html" title="WorldTimeApi (module)">WorldTimeApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="WorldTimeApi.html#AreaTimezonesTxt-constant" title="WorldTimeApi::AreaTimezonesTxt (constant)">AreaTimezonesTxt</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Europe</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+<h3 id="label-List+timezones+by+area+and+location+-28plain+text-29">List timezones by area and location (plain text)</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="WorldTimeApi.html" title="WorldTimeApi (module)">WorldTimeApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="WorldTimeApi.html#LocationTimezonesTxt-constant" title="WorldTimeApi::LocationTimezonesTxt (constant)">LocationTimezonesTxt</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>America</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Sao_Paulo</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+<h3 id="label-Get+time+by+area-2C+location+and+region+-28plain+text-29">Get time by area, location and region (plain text)</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="WorldTimeApi.html" title="WorldTimeApi (module)">WorldTimeApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="WorldTimeApi.html#RegionTimeTxt-constant" title="WorldTimeApi::RegionTimeTxt (constant)">RegionTimeTxt</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>America</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Argentina</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Salta</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+<h3 id="label-Get+time+by+IP+address+-28plain+text-29">Get time by IP address (plain text)</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="WorldTimeApi.html" title="WorldTimeApi (module)">WorldTimeApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="WorldTimeApi.html#ClientIpTxt-constant" title="WorldTimeApi::ClientIpTxt (constant)">ClientIpTxt</a></span></span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>12.215.42.19</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 </code></pre>
 
 <h2 id="label-Development">Development</h2>
@@ -118,7 +148,7 @@
 </div></div>
 
       <div id="footer">
-  Generated on Thu Nov 20 18:24:43 2025 by
+  Generated on Wed Jan 21 22:02:47 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.2.2).
 </div>
